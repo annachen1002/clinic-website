@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>門診叫號順序＋新旅程小知識</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #E6F5EE; /* 淺綠背景 */
+    }
+    header {
+      background: #2DAF7D; /* 品牌綠 */
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+      gap: 1rem;
+    }
+    .video-box {
+      flex: 2;
+      min-width: 300px;
+    }
+    .sheet-box {
+      flex: 1;
+      min-width: 280px;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background: #D1EDE1;
+      padding: 1rem;
+      text-align: center;
+      color: #2DAF7D;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>新旅程診所</h1>
+    <p>門診叫號順序 & 新旅程小知識</p>
+  </header>
+
+  <div class="container">
+    <div class="sheet-box">
+      <h2>📋 門診叫號順序</h2>
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSgw1l9oBp4CKabEJq-SX8aUZzQ7g46wph98aPgqYaWqOYgkZ3FZK2P-3wex0CypEtx6-K6-dR0uCH_/pubhtml?widget=true&amp;headers=false"></iframe>
+    </div>
+    <div class="video-box">
+      <h2>💡 新旅程小知識</h2>
+      <iframe src="https://www.youtube.com/embed/fUPAVEdoPd4" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 新旅程診所</p>
+  </footer>
+
+</body>
+</html>
