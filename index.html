@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>門診叫號順序</title>
+  <meta charset="UTF-8" />
+  <title>新旅程診所 - 門診資訊看板</title>
   <style>
     body {
       font-family: "Helvetica", "Arial", sans-serif;
@@ -11,67 +11,69 @@
       padding: 20px;
       box-sizing: border-box;
     }
-
-    h1 {
+    h1.main-title {
       color: #1a7f4f;
-      font-size: 32px;
+      font-size: 36px;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
-
     .container {
       display: flex;
-      flex-direction: row;
       gap: 20px;
       max-width: 100%;
+      height: 75vh;
     }
-
     .left, .right {
-      height: 70vh;
+      height: 100%;
     }
-
     .left {
       flex: 1;
     }
-
     .right {
       flex: 2;
+      display: flex;
+      flex-direction: column;
     }
-
+    .section-title {
+      color: #1a7f4f;
+      font-size: 24px;
+      margin-bottom: 12px;
+      text-align: center;
+      flex-shrink: 0;
+    }
     iframe {
       width: 100%;
       height: 100%;
       border: none;
+      flex-grow: 1;
     }
-
-    .video-title {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #1a7f4f;
-      text-align: center;
-    }
-
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        height: auto;
       }
-
       .left, .right {
         height: 50vh;
+      }
+      h1.main-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      .section-title {
+        font-size: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>門診叫號順序</h1>
-
+  <h1 class="main-title">新旅程診所 - 門診資訊看板</h1>
   <div class="container">
     <div class="left">
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQsoME7EBOUlm6ekdrZOlO3K84mn-TRPy8FZIr2PLpTy-Atae3sYI0jxZ0ByT6J7xNHUe0DeT-vLddU/pubhtml?gid=0&single=true&widget=true&headers=false"></iframe>
+      <div class="section-title">門診叫號順序</div>
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQsoME7EBOUlm6ekdrZOlO3K84mn-TRPy8FZIr2PLpTy-Atae3sYI0jxZ0ByT6J7xNHUe0DeT-vLddU/pubhtml?gid=0&single=true&widget=true&headers=false" allowfullscreen></iframe>
     </div>
-
     <div class="right">
-      <div class="video-title">新旅程小知識</div>
+      <div class="section-title">新旅程小知識</div>
       <iframe src="https://www.youtube.com/embed/fUPAVEdoPd4" allowfullscreen></iframe>
     </div>
   </div>
