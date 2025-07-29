@@ -2,82 +2,87 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <title>門診資訊看板</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>門診叫號順序 + 新旅程小知識</title>
   <style>
     body {
-      font-family: "Helvetica", "Arial", sans-serif;
-      background-color: #e6f4ea;
       margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
+      font-family: "Microsoft JhengHei", sans-serif, Arial, sans-serif;
+      background-color: #d0e5d1;
     }
-
+    header {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #2DAF7D;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
     .container {
       display: flex;
-      gap: 20px;
-      max-width: 100%;
-      height: 75vh;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      gap: 1rem;
     }
-
-    /* 左右欄寬度 */
+    .left, .right {
+      box-sizing: border-box;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
     .left {
-      flex: 1; /* 1份 */
-      display: flex;
-      flex-direction: column;
+      flex: 1;
+      min-width: 280px;
     }
-
     .right {
-      flex: 2; /* 2份 */
-      display: flex;
-      flex-direction: column;
+      flex: 2;
+      min-width: 300px;
     }
-
-    /* 標題，左右欄字體大小及高度一樣 */
-    .section-title {
-      font-size: 24px;
-      line-height: 40px;
-      color: #1a7f4f;
+    h2 {
       text-align: center;
-      margin: 0 0 10px 0;
-      height: 40px; /* 固定高度，保證左右標題同高 */
-      flex-shrink: 0;
+      color: #2f4f2f;
+      margin-bottom: 1rem;
     }
-
     iframe {
       width: 100%;
-      flex-grow: 1;  /* 佔滿剩餘空間 */
+      height: 420px;
       border: none;
-      min-height: 0; /* 防止溢出 */
+      border-radius: 6px;
     }
-
-    /* 響應式：螢幕小於768px時，改上下排列 */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
-        height: auto;
       }
-      .left, .right {
-        height: 50vh;
-      }
-      .section-title {
-        font-size: 20px;
-        line-height: 32px;
-        height: 32px;
+      iframe {
+        height: 300px;
       }
     }
   </style>
 </head>
 <body>
+  <header>新旅程診所 - 門診資訊看板</header>
+
   <div class="container">
-    <div class="left">
-      <div class="section-title">門診叫號順序</div>
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQsoME7EBOUlm6ekdrZOlO3K84mn-TRPy8FZIr2PLpTy-Atae3sYI0jxZ0ByT6J7xNHUe0DeT-vLddU/pubhtml?gid=0&single=true&widget=true&headers=false" allowfullscreen></iframe>
-    </div>
-    <div class="right">
-      <div class="section-title">新旅程小知識</div>
-      <iframe src="https://www.youtube.com/embed/fUPAVEdoPd4" allowfullscreen></iframe>
-    </div>
+    <section class="left">
+      <h2>門診叫號順序</h2>
+      <iframe 
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwa4p1bqkaYpjJ-1vpldrV3cBFksRVvRDaNqPbGJZ_zfmn-WuqIXcATZ16cPVtRxmU9bPQ_aVREUGw/pubhtml?widget=true&amp;headers=false" 
+        allowfullscreen>
+      </iframe>
+    </section>
+    <section class="right">
+      <h2>新旅程小知識</h2>
+      <iframe 
+        src="https://www.youtube.com/embed/fUPAVEdoPd4" 
+        allowfullscreen
+        title="新旅程小知識影片">
+      </iframe>
+    </section>
   </div>
 </body>
 </html>
+
+
