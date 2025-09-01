@@ -38,4 +38,64 @@
     }
 
     .left {
-      flex
+      flex-basis: 33.33%;
+    }
+
+    .right {
+      flex-basis: 66.66%;
+    }
+
+    iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 1920px) {
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        padding: 0.5rem;
+        gap: 1rem;
+      }
+      .left, .right {
+        flex-basis: auto;
+        height: 300px;
+        border-radius: 6px;
+      }
+      iframe {
+        border-radius: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 左側 Google 試算表 -->
+    <section class="left">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/1a7lDxgx5dayQjNEmeck7cjwPayNkycbZNpvROCWZRPQ/edit?usp=sharing"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <!-- 右側 YouTube 播放清單 -->
+    <section class="right">
+      <iframe
+        src="https://www.youtube.com/embed?listType=playlist&list=PL-zMvX01H915XCV36Cfc4TjvtjbUnicU6&autoplay=1&loop=1&playlist=PL-zMvX01H915XCV36Cfc4TjvtjbUnicU6"
+        allow="autoplay; fullscreen"
+        title="新旅程播放清單">
+      </iframe>
+    </section>
+  </div>
+</body>
+</html>
